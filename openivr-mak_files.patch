@@ -5,7 +5,7 @@
  endif
  
 -include $(OPENH323DIR)/openh323u.mak
-+include $(OPENH323DIR)/share/misc/openh323u.mak
++include $(OPENH323DIR)/share/openh323/openh323u.mak
  
  ifdef NOTRACE
  STDCCFLAGS += -DPASN_NOPRINTON -DPASN_LEANANDMEAN

@@ -2,14 +2,14 @@ Summary:	Simple IVR answering machine for the H.323 protocol
 Summary(pl):	Prosta automatyczna sekretarka dla protoko³u H.323
 Name:		openivr
 Version:	1.0.4
-Release:	1
+Release:	2
 License:	MPL 1.0
 Group:		Networking/Daemons
 Source0:	http://www.openh323.org/bin/%{name}_%{version}.tar.gz
 # Source0-md5:	c61a8b7abe061c23298f688cd795741e
 Patch0:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.11.7
+BuildRequires:	openh323-devel >= 1.12.0
 BuildRequires:	pwlib-devel >= 1.4.11
 %requires_eq	openh323
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
