@@ -3,7 +3,7 @@ Summary(pl):	Prosta automatyczna sekretarka dla protoko³u H.323
 Name:		openivr
 Version:	1.13.4
 %define fver	%(echo %{version} | tr . _)
-Release:	1
+Release:	2
 License:	MPL 1.0
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/openh323/%{name}-v%{fver}-src.tar.gz
