@@ -1,17 +1,18 @@
 Summary:	Simple IVR answering machine for the H.323 protocol
 Summary(pl):	Prosta automatyczna sekretarka dla protoko³u H.323
 Name:		openivr
-Version:	1.13.4
+Version:	1.13.5
 %define fver	%(echo %{version} | tr . _)
-Release:	2
+Release:	1
 License:	MPL 1.0
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/openh323/%{name}-v%{fver}-src.tar.gz
-# Source0-md5:	8af3eba252296660563261c5a306cfe4
-Patch0:		%{name}-mak_files.patch
+# Source0-md5:	c663d088560004af53ad89868a3aa0ea
+Patch0:		%{name}-cvs.patch
+Patch1:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.13.4-3
-BuildRequires:	pwlib-devel >= 1.6.5-3
+BuildRequires:	openh323-devel >= 1.15
+BuildRequires:	pwlib-devel >= 1.8
 %requires_eq	openh323
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,13 +29,15 @@ mo¿e u¿ywaæ programu Festival (http://www.festvox.org/).
 %prep
 %setup -qn %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 PWLIBDIR=%{_prefix}; export PWLIBDIR
 OPENH323DIR=%{_prefix}; export OPENH323DIR
 
 %{__make} %{?debug:debug}%{!?debug:opt}shared \
-	OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions %{!?debug:-DNDEBUG}"
+	CXX="%{__cxx}" \
+	OPTCCFLAGS="%{rpmcflags} -fno-exceptions %{!?debug:-DNDEBUG}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
