@@ -1,0 +1,11 @@
+--- openivr/Makefile.orig	2003-02-26 02:30:00.000000000 +0100
++++ openivr/Makefile	2003-04-19 01:41:26.000000000 +0200
+@@ -44,7 +44,7 @@
+ OPENH323DIR=$(HOME)/openh323
+ endif
+ 
+-include $(OPENH323DIR)/openh323u.mak
++include $(OPENH323DIR)/share/misc/openh323u.mak
+ 
+ ifdef NOTRACE
+ STDCCFLAGS += -DPASN_NOPRINTON -DPASN_LEANANDMEAN
