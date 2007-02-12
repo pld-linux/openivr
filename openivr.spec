@@ -1,5 +1,5 @@
 Summary:	Simple IVR answering machine for the H.323 protocol
-Summary(pl):	Prosta automatyczna sekretarka dla protoko≥u H.323
+Summary(pl.UTF-8):   Prosta automatyczna sekretarka dla protoko≈Çu H.323
 Name:		openivr
 Version:	1.13.5
 %define fver	%(echo %{version} | tr . _)
@@ -21,10 +21,10 @@ OpenIVR is a simple IVR answering machine for the H.323 protocol that
 uses the VXML scripting protocol. It uses the OpenH323 protocol stack
 and can use Festival (http://www.festvox.org/).
 
-%description -l pl
-OpenIVR to prosta automatyczna sekretarka dla protoko≥u H.323,
-uøywaj±ca protoko≥u skryptowego VXML. Uøywa stosu protoko≥u OpenH323 i
-moøe uøywaÊ programu Festival (http://www.festvox.org/).
+%description -l pl.UTF-8
+OpenIVR to prosta automatyczna sekretarka dla protoko≈Çu H.323,
+u≈ºywajƒÖca protoko≈Çu skryptowego VXML. U≈ºywa stosu protoko≈Çu OpenH323 i
+mo≈ºe u≈ºywaƒá programu Festival (http://www.festvox.org/).
 
 %prep
 %setup -qn %{name}
