@@ -1,5 +1,5 @@
 Summary:	Simple IVR answering machine for the H.323 protocol
-Summary(pl.UTF-8):   Prosta automatyczna sekretarka dla protokołu H.323
+Summary(pl.UTF-8):	Prosta automatyczna sekretarka dla protokołu H.323
 Name:		openivr
 Version:	1.13.5
 %define fver	%(echo %{version} | tr . _)
